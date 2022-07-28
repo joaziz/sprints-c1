@@ -1,0 +1,45 @@
+/*selector by tag*/
+
+body {
+    background: #392d4c !important;
+}
+
+
+header {
+    background: #584f23;
+}
+
+footer {
+    background: lightcoral;
+}
+
+div div div {
+    background: rgba(229, 130, 8, 0.93);
+}
+
+/*selector by id*/
+#topMenu {
+    background: #FFFFFF;
+}
+
+main div#leftSection div img {
+    width: 50px;
+}
+
+
+a {
+    background: red;
+}
+
+
+/*selector by path*/
+ul a {
+    background: blue;
+}
+
+/*selector by class*/
+.bgred {
+    background: red;
+}
+
+
