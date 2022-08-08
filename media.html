@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+
+        .testMedia {
+            background: aqua;
+            height: 200px;
+            width: 100%;
+            transition: all ease-in-out 1s;
+        }
+
+        body {
+            background: #2e70a9;
+        }
+
+
+        @media only screen and (min-width: 400px ) {
+
+            body {
+                background: #a92e86;
+            }
+
+            .testMedia {
+                width: 80%;
+                display: none;
+            }
+        }
+
+
+        @media only screen and (min-width: 800px ) {
+
+            body {
+                background: #ffffff;
+            }
+
+            .testMedia {
+                width: 50%;
+                display: block;
+            }
+        }
+
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        div#MainForm {
+            border: black thin solid;
+            height: 30px;
+            width: 500px;
+            margin: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            z-index: 10001;
+            position: relative;
+        }
+
+        div#MainForm input, div#MainForm button {
+            height: 100%;
+            border: none;
+            outline: none;
+            padding: 6px;
+            float: left;
+        }
+
+        div#MainForm input {
+            width: 85%;
+        }
+
+        div#MainForm button {
+            width: 15%;
+            background: #2e70a9;
+        }
+
+        body{
+            width: 100%;
+        }
+        section {
+            width: 60%;
+            height: 100px;
+            background: red;
+            margin: 0 auto;
+            display: block;
+            box-shadow: 1px 4px 14px 8px #0000001f;
+        }
+
+        section img {
+            max-width: 100%;
+        }
+    </style>
+
+
+</head>
+<body>
+
+
+<!--<div class="testMedia">-->
+<!--    DIV-->
+<!--</div>-->
+
+
+<!--<main>Main section</main>-->
+
+<!--    <section>-->
+<!--        <img src="assets/images/mockup_apple_iphone_12_pro_max_644201348e.png">-->
+<!--    </section>-->
+
+
+
+
+
+<section>
+
+
+    <div id="MainForm">
+        <input type="text" placeholder="search">
+        <button>Search</button>
+    </div>
+</section>
+<!--    <section>sec1</section>-->
+<!--    <section>sec1</section>-->
+<!--    <section>sec1</section>-->
+<!--    <section>sec1</section>-->
+<!--    <section>sec1</section>-->
+<!--    <section>sec1</section>-->
+<!--    <section>sec1</section>-->
+<!--    <section>sec1</section>-->
+<!--    <section>sec1</section>-->
+<!--    <section>sec1</section>-->
+<!--    <section>sec1</section>-->
+
+
+</body>
+</html>

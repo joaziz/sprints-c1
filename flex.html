@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex</title>
+</head>
+
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body {
+        height: 900px;
+    }
+
+    .parent {
+        display: flex;
+        background: rgba(85, 107, 47, 0.3);
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .header {
+        height: 10%;
+
+    }
+
+    .main {
+        height: 70%;
+        background: #2e70a9;
+        display: flex;
+    }
+
+    .sidebar {
+        flex-grow: 1;
+        background: #a92e86;
+    }
+
+    .content {
+        display: flex;
+        background: #26420f;
+        flex-grow: 5;
+        flex-wrap: wrap;
+    }
+
+    .banner {
+        width: 100%;
+
+        background: rgba(255, 0, 0, 0.26);
+    }
+
+    .item {
+        width: 50%;
+        background: rgba(255, 0, 0, 0.26);
+        /*margin: 1px;*/
+    }
+
+    .main
+</style>
+<body>
+
+<main class="parent">
+    <section class="child header">header</section>
+    <section class="child main ">
+
+        <section class="child sidebar">sidebar</section>
+        <section class="child content">
+
+            <section class="child banner">banner</section>
+            <section class="child item">item1</section>
+            <section class="child item">item2</section>
+
+
+        </section>
+
+
+    </section>
+    <section class="child">footer</section>
+</main>
+
+
+</body>
+</html>

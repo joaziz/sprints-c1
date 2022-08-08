@@ -1,45 +1,130 @@
-/*selector by tag*/
-
-body {
-    background: #392d4c !important;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-
-header {
-    background: #584f23;
-}
-
-footer {
-    background: lightcoral;
-}
-
-div div div {
-    background: rgba(229, 130, 8, 0.93);
-}
-
-/*selector by id*/
-#topMenu {
-    background: #FFFFFF;
-}
-
-main div#leftSection div img {
+section {
     width: 50px;
-}
-
-
-a {
-    background: red;
-}
-
-
-/*selector by path*/
-ul a {
+    height: 50px;
     background: blue;
 }
 
-/*selector by class*/
-.bgred {
-    background: red;
+header {
+    background: #2e70a9;
+    padding: 10px 30px;
 }
 
+header > * {
+    display: inline-block;
+    vertical-align: middle;
+}
 
+.circle {
+    border-radius: 10px;
+}
+
+.logoImg {
+    width: 80px;
+}
+
+.menuDiv {
+    background: rgba(0, 0, 0, 0.35);
+    display: inline-block;
+    color: #2e70a9;
+    float: right;
+}
+
+.menuDiv > * {
+    display: inline-block;
+}
+
+.menuDiv ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.menuDiv ul li a {
+    color: #2e70a9;
+    text-decoration: none;
+    padding: 25px 20px;
+    display: inline-block;
+    transition: ease-in-out all .5s;
+}
+
+.menuDiv ul li a:hover {
+    color: #fff;
+    font-size: large;
+    background: #2e70a9;
+}
+
+.avatar {
+    width: 60px;
+    vertical-align: middle;
+}
+
+/*body{*/
+/*    height: 3000px;*/
+/*}*/
+/*.class {*/
+/*    width: 20px;*/
+/*    padding: 15px;*/
+/*    text-align: center;*/
+/*    margin: 2px;*/
+/*    display: inline;*/
+/*    height: 500px;*/
+/*}*/
+
+/*#d1 {*/
+/*    background: green;*/
+/*}*/
+
+/*#d2 {*/
+/*    background: darkorange;*/
+/*    !*position: ;*!*/
+/*    left: 0;*/
+/*    top: 300px;*/
+/*}*/
+
+
+/**{*/
+/*    box-sizing: border-box !important;*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*}*/
+
+
+/*!*p, a, h2, h1 {*!*/
+/*!*    !*text-shadow: 3px 0px 3px #0000006b;*!*!*/
+/*!*    text-align: justify;*!*/
+/*!*    text-decoration: underline;*!*/
+/*!*    text-transform: lowercase;*!*/
+/*!*    !*direction: rtl;*!*!*/
+/*!*    font-family: 'Square Peg', cursive;*!*/
+/*!*    font-size: 50px;*!*/
+/*!*    font-weight: 100;*!*/
+/*!*    font-style: normal;*!*/
+/*!*    color: #350086;*!*/
+/*!*}*!*/
+/*!*div{*!*/
+/*!*    background: black;*!*/
+/*!*    padding: 2px;*!*/
+/*!*    display: inline-block;*!*/
+/*!*    position: absolute;*!*/
+/*!*}*!*/
+/*!*img {*!*/
+/*!*    width: 200px;*!*/
+/*!*    margin: 0;*!*/
+/*!*    background: red;*!*/
+/*!*    padding: 10px 20px ;*!*/
+/*!*    border: #350086 5px solid;*!*/
+/*!*    display: block;*!*/
+/*!*}*!*/
+
+
+/*!*#topLogo {*!*/
+/*!*    background: red;*!*/
+/*!*    padding: 50px;*!*/
+/*!*    border: #350086 20px solid;*!*/
+/*!*    margin: 20px;*!*/
+/*!*}*!*/
