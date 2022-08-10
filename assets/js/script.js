@@ -18,7 +18,7 @@ let y = 5;
 // or |
 
 
-console.log(y < x | y == x)
+// console.log(y < x | y == x)
 // console.log(y == x)
 // console.log(y >= x)
 // console.log(y <= x)
