@@ -1,0 +1,23 @@
+{
+  "name": "sc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Math.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaziz/sprints-c1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaziz/sprints-c1/issues"
+  },
+  "homepage": "https://github.com/joaziz/sprints-c1#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
