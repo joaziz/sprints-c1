@@ -1,0 +1,27 @@
+E-commerce
+    - products
+        - CRUD
+        - mark as out of stock
+    - categories
+        - CRUD
+        - change status (active - deactivate)
+    - brands
+        - CRUD
+        - change status (active - deactivate)
+    - checkout
+        - pre defined payment methods
+        - init a new payment process
+        - do the actual payment
+    - order
+        - track order
+        -change order status
+        -list all orders
+    - users
+        - auth
+            - login
+            - sing up
+            - forget password
+            - reset password
+        - listing all users
+        - active/deactivate user
+    - cart
