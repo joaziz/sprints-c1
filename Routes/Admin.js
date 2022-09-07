@@ -18,6 +18,7 @@ adminApp.get("/product", productController.list);
 adminApp.post("/product", productController.create);
 //update
 adminApp.put("/product/:id", productController.update);
+adminApp.get("/product/:id", productController.viewOne);
 //delete
 adminApp.delete("/product/:id", productController.delete);
 //change status

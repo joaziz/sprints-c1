@@ -1,3 +1,6 @@
+const {find, findOne} = require("../DB/Base");
+const {Product} = require("../DB/Product");
+
 class ProductService {
 
 
@@ -5,16 +8,17 @@ class ProductService {
 
         if (!user || user == "guest")
             return [{name: "only 1 "}]
+        let product = new Product();
+        return await product.find()
+    }
 
-
-
-        return [
-            {name: "p1"},
-            {name: "p2"},
-            {name: "p3"}
-        ]
+    async one(id) {
+        let product = new Product();
+        return await product.findOne(id)
     }
 }
+
+
 
 
 module.exports = {
