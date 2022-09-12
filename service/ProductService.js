@@ -16,6 +16,16 @@ class ProductService {
         let product = new Product();
         return await product.findOne(id)
     }
+
+    async update(id, params) {
+        let product = new Product();
+        return await product.update(id, params)
+    }
+
+    async delete(id) {
+        let product = new Product();
+        return await product.delete(id)
+    }
 }
 
 

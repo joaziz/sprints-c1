@@ -22,7 +22,7 @@ adminApp.get("/product/:id", productController.viewOne);
 //delete
 adminApp.delete("/product/:id", productController.delete);
 //change status
-adminApp.put("/product/:id/:status", productController.changeStatus);
+adminApp.put("/product/:id/change-status", productController.changeStatus);
 
 // -----------------
 //list
@@ -36,6 +36,7 @@ adminApp.delete("/brands/:id", brandControllers.delete);
 // -----------------
 // auth
 adminApp.post("/auth/login", authControllers.login);
+adminApp.post("/auth/register", authControllers.register);
 adminApp.post("/auth/forget-apswwrod", authControllers.forgetPassword);
 adminApp.post("/auth/reset-apswwrod", authControllers.resetPassword);
 

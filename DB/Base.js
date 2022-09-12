@@ -1,4 +1,5 @@
 const Mongo = require("mongodb")
+const {ObjectId} = require("mongodb");
 const MongoClient = Mongo.MongoClient;
 
 function MongoConnect(url) {
@@ -57,12 +58,44 @@ function findOne(collectionName, filter = {}) {
 
 }
 
+async function update(collectionName, id, date) {
+    return new Promise((resolve, reject) => {
+        MongoConnect("mongodb://localhost:27017")
+            .then((db) => {
+                const dbo = db.db("ecommerce");
+                dbo.collection(collectionName)
+                    .updateOne({_id: ObjectId(id)}, {$set: date}, function (error, result) {
+                        if (error) return reject(error);
+                        resolve(result);
+                        db.close();
+                    });
+            })
+    });
+}
+
+
+async function deleteOne(collectionName, id) {
+    return new Promise((resolve, reject) => {
+        MongoConnect("mongodb://localhost:27017")
+            .then((db) => {
+                const dbo = db.db("ecommerce");
+                dbo.collection(collectionName)
+                    .deleteOne({_id: ObjectId(id)}, function (error, result) {
+                        if (error) return reject(error);
+                        resolve(result);
+                        db.close();
+                    });
+            })
+    });
+}
 
 module.exports = {
     MongoConnect,
     insertOne,
     find,
-    findOne
+    findOne,
+    deleteOne,
+    update
 }
 
 

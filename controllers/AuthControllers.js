@@ -1,8 +1,28 @@
+const {UsersService} = require("../service/UsersService");
+
 class AuthControllers {
 
-    login(req, res) {
+    async login(req, res) {
+
+        const {username, password} = req.body;
+
+        let userService = new UsersService;
+        let user = await userService.login(username, password)
+
         res.json({
-            message: "user login"
+            user
+        });
+    }
+
+    async register(req, res) {
+
+        const {username, password} = req.body;
+
+        let userService = new UsersService;
+        let user = await userService.register(username, password)
+
+        res.json({
+            user
         });
     }
 

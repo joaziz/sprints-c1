@@ -33,19 +33,48 @@ class ProductControllers {
         });
     }
 
-    update(req, res) {
+    async update(req, res) {
+
+        const {id} = req.params;
+        const {name, price, count} = req.body;
+
+        let service = new ProductService();
         res.json({
-            message: "product updated successfully"
+            product: await service.update(id, {name, price, count})
         });
     }
 
-    delete(req, res) {
+    async delete(req, res) {
+        const {id} = req.params;
+
+        let service = new ProductService();
+        await service.delete(id)
         res.json({
             message: "product deleted successfully"
         });
     }
 
-    changeStatus(req, res) {
+    async changeStatus(req, res) {
+        let service = new ProductService();
+
+
+        const id = req.params.id;
+        let product = await service.one(id)
+
+        if (!product)
+            res.statusCode(400).json({
+                message: "product not found"
+            });
+
+        let status = "active";
+        if (!product.status || product.status != "active")
+            status = "active";
+        else
+            status = "deactivate";
+
+        await service.update(id, {status})
+
+
         res.json({
             message: "product status changed successfully"
         });

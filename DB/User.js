@@ -1,11 +1,11 @@
 const {BaseModel} = require("./BaseModel");
 
 
-class Product extends BaseModel {
-    name = "product"
+class User extends BaseModel {
+    name = "users"
 }
 
 
 module.exports = {
-    Product
+    User
 }
