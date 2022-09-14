@@ -1,5 +1,5 @@
 const {User} = require("../DB/User");
-
+const jwt = require('jsonwebtoken');
 const bcrypt = require("bcrypt");
 
 class UsersService {
@@ -22,8 +22,12 @@ class UsersService {
         if (!user.isActive)
             return {status: false, message: "user not active"};
 
+/// user is ok
 
-        return {status: true, user};
+
+        let token = jwt.sign({username: user.username, id: user._id}, 'shhhhh');
+
+        return {status: true, token};
     }
 
     async findById(authid) {
@@ -69,6 +73,22 @@ class UsersService {
                 resolve(result);
             })
         })
+    }
+
+    async makeAToken(user) {
+
+        let header = {"alg": "HS256", "typ": "JWT"};
+        let payload = {username: user.username, id: user._id};
+        let sing = {};
+
+
+        let partOneAndTwo = Buffer.from(JSON.stringify(header)).toString("base64") + "." + Buffer.from(JSON.stringify(payload)).toString("base64");
+
+        let hash = await this.encrypt(partOneAndTwo)
+
+        let token = partOneAndTwo + "." + Buffer.from(hash).toString("base64")
+
+        return token
     }
 }
 
